@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
+ *  Dima is ruski
  * @author hp
  */
 public class OurTunes extends Application {
