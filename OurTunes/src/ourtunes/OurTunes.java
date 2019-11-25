@@ -12,7 +12,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 // opsakjdsjakdjask
 // whasaaap
-/**
+/** 
+ * How much for vodka?
  *
  * @author hp
  *///hmmmmmf
