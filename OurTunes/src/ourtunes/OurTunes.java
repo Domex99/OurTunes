@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 // opsakjdsjakdjask
 // whasaaap
 // wjahedjahejshajea
+
+//NANI?
 /** 
  * How much for vodka?
  *
@@ -37,4 +39,7 @@ public class OurTunes extends Application {
         launch(args);
     }
     
+    public void Feat(){
+        
+    }
 }
