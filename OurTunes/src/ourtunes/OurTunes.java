@@ -10,16 +10,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-// opsakjdsjakdjask
-// whasaaap
-// wjahedjahejshajea
 
-//NANI?
 /** 
- * How much for vodka?
+ * 
  *
  * @author hp
- *///hmmmmmf
+ */
 public class OurTunes extends Application {
     
     @Override
