@@ -10,5 +10,6 @@ package ourtunes.dal;
  * @author XMdag
  */
 public class DalFacade {
-    
+    public List<Song>
 }
+

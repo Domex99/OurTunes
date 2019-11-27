@@ -3,24 +3,30 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="743.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ourtunes.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="743.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ourtunes.FXMLDocumentController">
     <children>
         <Button fx:id="button" layoutX="40.0" layoutY="539.0" onAction="#handleButtonAction" text="New..." />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Text layoutX="103.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Playlists" />
-      <Text layoutX="311.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Songs on Playlist" />
-      <Text layoutX="627.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Songs" />
+      <Text layoutX="119.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Playlists" />
+      <Text layoutX="357.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Songs on Playlist" />
+      <Text layoutX="697.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Songs" />
       <Text layoutX="406.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Song is Playing" />
-      <Button layoutX="118.0" layoutY="539.0" mnemonicParsing="false" text="Edit..." />
+      <Button layoutX="97.0" layoutY="539.0" mnemonicParsing="false" text="Edit..." />
       <Button layoutX="189.0" layoutY="539.0" mnemonicParsing="false" text="Delete" />
-      <Button layoutX="405.0" layoutY="539.0" mnemonicParsing="false" text="Delete" />
-      <ListView layoutX="40.0" layoutY="172.0" prefHeight="345.0" prefWidth="200.0" />
-      <ListView layoutX="256.0" layoutY="172.0" prefHeight="345.0" prefWidth="200.0" />
-      <ListView layoutX="472.0" layoutY="172.0" prefHeight="345.0" prefWidth="342.0" />
-      <Button layoutX="259.0" layoutY="539.0" mnemonicParsing="false" text="UP" />
-      <Button layoutX="302.0" layoutY="539.0" mnemonicParsing="false" text="DOWN" />
+      <Button layoutX="456.0" layoutY="539.0" mnemonicParsing="false" text="Delete" />
+      <ListView layoutX="45.0" layoutY="172.0" prefHeight="345.0" prefWidth="200.0" />
+      <ListView layoutX="302.0" layoutY="172.0" prefHeight="345.0" prefWidth="200.0" />
+      <ListView layoutX="542.0" layoutY="172.0" prefHeight="345.0" prefWidth="342.0" />
+      <Button layoutX="302.0" layoutY="539.0" mnemonicParsing="false" text="UP" />
+      <Button layoutX="348.0" layoutY="539.0" mnemonicParsing="false" text="DOWN" />
+      <TextField layoutX="789.0" layoutY="43.0" prefHeight="25.0" prefWidth="89.0" />
+      <Text layoutX="741.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter:" />
+      <Button layoutX="542.0" layoutY="539.0" mnemonicParsing="false" text="New..." />
+      <Button layoutX="606.0" layoutY="540.0" mnemonicParsing="false" text="Edit..." />
+      <Button layoutX="716.0" layoutY="540.0" mnemonicParsing="false" text="Delete" />
     </children>
 </AnchorPane>

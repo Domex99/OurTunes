@@ -9,6 +9,6 @@ package ourtunes.dal;
  *
  * @author XMdag
  */
-public class SongDal {
+public class GenreDAO {
     
 }
