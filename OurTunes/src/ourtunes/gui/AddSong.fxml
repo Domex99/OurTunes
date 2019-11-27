@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="267.0" prefWidth="411.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="ourtunes.gui.AddSongController">
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ourtunes.gui.AddSongController">
    <children>
-      <Button layoutX="180.0" layoutY="115.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="236.0" layoutY="337.0" mnemonicParsing="false" text="Save" />
+      <TextField layoutX="57.0" layoutY="52.0" promptText="Name" />
+      <Button layoutX="301.0" layoutY="337.0" mnemonicParsing="false" text="Cancel" />
+      <TextField layoutX="57.0" layoutY="235.0" promptText="Path" />
+      <Button layoutX="225.0" layoutY="235.0" mnemonicParsing="false" text="Choose..." />
    </children>
 </AnchorPane>
