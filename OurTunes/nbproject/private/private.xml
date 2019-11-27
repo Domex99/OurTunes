@@ -5,8 +5,14 @@
         <group>
             <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/OurTunes.java</file>
             <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/nbproject/private/private.properties</file>
+            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/be/Song.java</file>
+            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/DalInterface.java</file>
+            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/GenreDal.java</file>
+            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/SongDal.java</file>
+            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/DalFacade.java</file>
+            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/PlaylistDal.java</file>
+            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/DatabaseConnection.java</file>
             <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/nbproject/private/private.xml</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/FXMLDocumentController.java</file>
         </group>
     </open-files>
 </project-private>
