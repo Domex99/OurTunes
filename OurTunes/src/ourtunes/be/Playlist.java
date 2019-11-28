@@ -11,4 +11,39 @@ package ourtunes.be;
  */
 public class Playlist {
     
+    private int playlistID;
+    
+    private String playlistName;
+    
+    private int playlistLength;
+    
+
+
+public Playlist(int playlistID, String playlistName, int playlistLength) {
+        
+        this.playlistID = playlistID;
+        this.playlistName = playlistName;
+        this.playlistLength = playlistLength;
+    
+    }
+
+public int getplaylistID() {
+        return playlistID;
+    }
+
+public String getplaylistName() {
+        return playlistName;
+    }
+
+public void setplaylistName(String name) {
+        this.playlistName = playlistName;
+    }
+
+public int getplatlistLength() {
+        return playlistLength;
+    }
+
 }
+
+
+
