@@ -25,16 +25,16 @@ import ourtunes.dal.DatabaseConnection;
  */
 public class PlaylistDAO {
     
-<<<<<<< HEAD
+
     
-=======
+
 private DatabaseConnection connector;
 
 
 public PlaylistDAO()
 {
 connector = new DatabaseConnection();
->>>>>>> 63b192140cb703988b7cdf477e42f19b9a06d7a3
+
 }
 //Gets All songs from the database
     public List<Playlist> getAllPlaylist() throws SQLException
