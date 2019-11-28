@@ -7,10 +7,14 @@ package ourtunes.gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import ourtunes.be.Song;
+import ourtunes.dal.DalFacade;
 
 /**
  *
@@ -29,7 +33,7 @@ public class MyTunesController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
     }    
     
 }

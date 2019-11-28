@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ourtunes.dal;
+package ourtunes.bll;
 
 /**
  *
  * @author XMdag
  */
-public class DalFacade {
+public class BllManager {
     
 }
-
