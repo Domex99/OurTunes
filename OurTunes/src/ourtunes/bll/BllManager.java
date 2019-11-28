@@ -5,10 +5,27 @@
  */
 package ourtunes.bll;
 
+import java.sql.SQLException;
+import java.util.List;
+import ourtunes.be.Song;
+import ourtunes.dal.SongDAO;
+
 /**
  *
  * @author XMdag
  */
 public class BllManager {
     
+    private SongDAO songdao;
+    
+    public BllManager(){
+        SongDAO SongDAO = new SongDAO();
+
+
+}
+    
+    public List<Song> getAllSongs() throws SQLException{
+        return songdao.getAllSongs();
+    
+    }
 }
