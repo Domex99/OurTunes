@@ -32,4 +32,9 @@ public class Genre {
     public String setGenre_name() {
         return genre_name;
     }
+<<<<<<< Updated upstream
 }
+=======
+    
+}
+>>>>>>> Stashed changes

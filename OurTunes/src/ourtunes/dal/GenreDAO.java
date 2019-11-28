@@ -16,7 +16,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< Updated upstream
 import ourtunes.be.Genre;
+=======
+>>>>>>> Stashed changes
 import ourtunes.dal.DatabaseConnection;
 
 /**
@@ -35,8 +38,13 @@ connector = new DatabaseConnection();
 //Gets All songs from the database
     public List<Genre> getAllGeners() throws SQLException
     {
+<<<<<<< Updated upstream
         String sqlStatement = "SELECT * FROM Genres";
         List<Genre>allGenres = new ArrayList();
+=======
+        String sqlStatement = "SELECT * FROM Geners";
+        List<Genre> allGens = new ArrayList();
+>>>>>>> Stashed changes
         try(Connection con = connector.getConnection();
                 PreparedStatement statement = con.prepareStatement(sqlStatement))
         {
@@ -46,9 +54,18 @@ connector = new DatabaseConnection();
             {
                 int genre_ID = rs.getInt("genre_ID");
                 String genre_name = rs.getString("genre_name");
+<<<<<<< Updated upstream
                 allGenres.add(new Genre(genre_ID, genre_name));
+=======
+                allGenres.add(new Genre(Genre_ID, Genre_name));
+>>>>>>> Stashed changes
             }
         }
         return allGenres;
     }
+<<<<<<< Updated upstream
     }
+=======
+    }
+
+>>>>>>> Stashed changes
