@@ -25,7 +25,7 @@ public class Song {
     private int time;
     
     
-    private Song(String name, String artist, String genre, int songID, int time, String path){
+    public Song(String name, String artist, String genre, int songID, int time, String path){
         
         this.name = name;
         this.songID = songID;
