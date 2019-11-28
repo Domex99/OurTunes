@@ -35,7 +35,7 @@ connector = new DatabaseConnection();
 //Gets All songs from the database
     public List<Song> getAllSongs() throws SQLException
     {
-        String sqlStatement = "SELECT * FROM Songs WHERE userId=?";
+        String sqlStatement = "SELECT * FROM Songs";
         List<Song> allSongs = new ArrayList();
         try(Connection con = connector.getConnection();
                 PreparedStatement statement = con.prepareStatement(sqlStatement))
