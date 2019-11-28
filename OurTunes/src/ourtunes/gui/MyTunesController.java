@@ -33,7 +33,7 @@ public class MyTunesController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        
     }    
     
 }
