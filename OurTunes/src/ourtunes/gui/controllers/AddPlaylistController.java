@@ -3,11 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ourtunes.gui;
+package ourtunes.gui.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -16,6 +19,11 @@ import javafx.fxml.Initializable;
  */
 public class AddPlaylistController implements Initializable {
 
+    @FXML
+    private Button saveNewPlaylist;
+    @FXML
+    private Button cancelSavingPlaylist;
+
     /**
      * Initializes the controller class.
      */
@@ -23,5 +31,13 @@ public class AddPlaylistController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void savesPlaylist(ActionEvent event) {
+    }
+
+    @FXML
+    private void cancelsSavingPlaylist(ActionEvent event) {
+    }
     
 }

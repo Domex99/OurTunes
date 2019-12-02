@@ -12,32 +12,22 @@ package ourtunes.be;
 public class Song {
     
     private String name;
-    
     private String artist;
-    
     private String genre;
-    
     private String path;
-
     private int songID;
-    
-    //find another way to track time
     private int time;
     
     
-    public Song(String name, String artist, String genre, int songID, int time, String path){
-        
+    public Song(String name, String artist, String genre, int songID, int time, String path)
+    {  
         this.name = name;
         this.songID = songID;
         this.artist = artist;
         this.genre = genre;
-        this.songID = songID;
         this.time = time;
         this.path = path;
-        
-    
-    
-    }
+        }
 
     public String getPath() {
         return path;
