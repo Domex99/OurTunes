@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="281.0" prefWidth="419.0" style="-fx-background-color: azure;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="ourtunes.gui.AddPlaylistController">
+<AnchorPane id="AnchorPane" prefHeight="281.0" prefWidth="419.0" style="-fx-background-color: azure;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ourtunes.gui.AddPlaylistController">
    <children>
       <Label layoutX="35.0" layoutY="125.0" prefHeight="31.0" prefWidth="38.0" text="Name">
          <font>
@@ -15,8 +14,8 @@
          </font>
       </Label>
       <TextField layoutX="78.0" layoutY="128.0" style="-fx-border-color: black;" />
-      <Button layoutX="227.0" layoutY="202.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Save" />
-      <Button layoutX="303.0" layoutY="202.0" mnemonicParsing="false" text="Cancel" />
+      <Button fx:id="saveNewPlaylist" layoutX="227.0" layoutY="202.0" mnemonicParsing="false" onAction="#savesPlaylist" prefHeight="25.0" prefWidth="52.0" text="Save" />
+      <Button fx:id="cancelSavingPlaylist" layoutX="303.0" layoutY="202.0" mnemonicParsing="false" onAction="#cancelsSavingPlaylist" text="Cancel" />
       <Label alignment="CENTER" layoutX="112.0" layoutY="6.0" prefHeight="17.0" prefWidth="195.0" text="Create a new playlist">
          <font>
             <Font name="Times New Roman Italic" size="20.0" />
