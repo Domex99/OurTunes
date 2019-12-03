@@ -17,6 +17,7 @@ public class Song {
     private String path;
     private int songID;
     private int time;
+    public boolean toString;
     
     
     public Song(String name, String artist, String genre, int songID, int time, String path)
