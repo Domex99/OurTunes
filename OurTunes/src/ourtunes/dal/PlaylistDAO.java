@@ -51,7 +51,7 @@ connector = new DatabaseConnection();
                 int playlistID = rs.getInt("playlistID");
                 String playlistName = rs.getString("playlistName");
                 int playlistLength = rs.getInt("playlistLength");
-                allPlaylists.add(new Playlist(playlistID, playlistName, playlistLength));
+                allPlaylists.add(new Playlist(playlistID, playlistName));
             }
         }
         return allPlaylists;
