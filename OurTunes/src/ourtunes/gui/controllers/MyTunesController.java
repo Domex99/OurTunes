@@ -62,7 +62,7 @@ public class MyTunesController implements Initializable {
 
     private BllManager blMan;
     @FXML
-    private ListView<Song> displayPlaylist;
+    private ListView<Song> displaySongs;
 
     public MyTunesController() {
         blMan = new BllManager();
@@ -77,7 +77,7 @@ public class MyTunesController implements Initializable {
 
         ObservableList<Song> songlist = FXCollections.observableArrayList();
         songlist.addAll(listOfSongs);
-displayPlaylist.setItems(songlist);
+displaySongs.setItems(songlist);
     }
 
     @FXML
