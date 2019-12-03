@@ -19,12 +19,13 @@ public class BllManager {
     private SongDAO songdao;
     
     public BllManager(){
-        SongDAO SongDAO = new SongDAO();
+         songdao = new SongDAO();
 
 
 }
     
-    public List<Song> getAllSongs() throws SQLException{
+    public List<Song> getAllSongs(){
+        
         return songdao.getAllSongs();
     
     }

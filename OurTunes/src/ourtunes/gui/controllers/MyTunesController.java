@@ -7,7 +7,11 @@ package ourtunes.gui.controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,9 +22,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import ourtunes.be.Song;
+import ourtunes.bll.BllManager;
 import ourtunes.dal.DalFacade;
 
 /**
@@ -28,7 +34,7 @@ import ourtunes.dal.DalFacade;
  * @author hp
  */
 public class MyTunesController implements Initializable {
-    
+
     @FXML
     private Label label;
     @FXML
@@ -51,22 +57,34 @@ public class MyTunesController implements Initializable {
     private ImageView rewindBack;
     @FXML
     private ImageView rewindForward;
-    
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+
+    private ListView lstSongs;
+
+    private BllManager blMan;
+    @FXML
+    private ListView<Song> displayPlaylist;
+
+    public MyTunesController() {
+        blMan = new BllManager();
+       // lstSongs.getItems().add(this);
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-    }    
+        List<Song> listOfSongs = null;
+
+        listOfSongs = blMan.getAllSongs();
+
+        ObservableList<Song> songlist = FXCollections.observableArrayList();
+        songlist.addAll(listOfSongs);
+displayPlaylist.setItems(songlist);
+    }
 
     @FXML
     private void createNewPlaylist(ActionEvent event) throws IOException {
         Parent root1;
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/AddPlaylist.fxml"));
-            root1 = (Parent) fxmlLoader.load();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/AddPlaylist.fxml"));
+        root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
         stage.setScene(new Scene(root1, 650, 650));
         stage.centerOnScreen();
@@ -100,5 +118,5 @@ public class MyTunesController implements Initializable {
         stage.centerOnScreen();
         stage.show();
     }
-    
+
 }
