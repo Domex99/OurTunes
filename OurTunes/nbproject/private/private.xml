@@ -3,13 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/view/AddPlaylist.fxml</file>
-            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/view/MyTunes.fxml</file>
-            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/view/AddSong.fxml</file>
-            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/PlaylistDAO.java</file>
-            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/controllers/MyTunesController.java</file>
-            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/OurTunes.java</file>
-            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/be/Song.java</file>
+            <file>file:/C:/Users/dpank/OneDrive/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/OurTunes.java</file>
         </group>
     </open-files>
 </project-private>
