@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -44,7 +44,7 @@
          <font>
             <Font size="15.0" />
          </font></Text>
-      <Button fx:id="newSong" layoutX="542.0" layoutY="539.0" mnemonicParsing="false" text="New..." />
+      <Button fx:id="newSong" layoutX="542.0" layoutY="539.0" mnemonicParsing="false" onAction="#addNewSong" text="New..." />
       <Button layoutX="606.0" layoutY="540.0" mnemonicParsing="false" text="Edit..." />
       <Button fx:id="deleteSong" layoutX="716.0" layoutY="540.0" mnemonicParsing="false" text="Delete" />
       <ProgressBar layoutX="346.0" layoutY="88.0" prefWidth="200.0" progress="0.24" />
