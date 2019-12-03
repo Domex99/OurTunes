@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ourtunes.gui.controllers;
+package ourtunes.gui.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,27 +11,24 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
- * @author XMdag
+ * @author hp
  */
-public class AddSongController implements Initializable {
+public class EditPlaylistController implements Initializable {
 
     @FXML
-    private Button saveSong;
+    private Button renamePlaylist;
     @FXML
-    private TextField inputSongName;
+    private Button addSongToPlaylist;
     @FXML
-    private Button cancelSavingSong;
+    private Button cancelEditingPlaylist;
     @FXML
-    private Button chooseSongPath;
-    @FXML
-    private ChoiceBox<?> genreChoiceBox;
+    private TextField inputNewPlaylistName;
 
     /**
      * Initializes the controller class.
@@ -42,18 +39,22 @@ public class AddSongController implements Initializable {
     }    
 
     @FXML
-    private void savesTheSong(ActionEvent event) {
+    private void renamePlaylistAction(ActionEvent event) {
     }
 
     @FXML
-    private void cancelsSavingSong(ActionEvent event) {
-        Stage stage = (Stage) cancelSavingSong.getScene().getWindow();
+    private void addSongToPlaylistAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void cancelEditingPlaylistAction(ActionEvent event) {
+          Stage stage = (Stage) cancelEditingPlaylist.getScene().getWindow();
     
     stage.close();
     }
 
     @FXML
-    private void choosesSongPath(ActionEvent event) {
+    private void inputNewPlaylistNameAction(ActionEvent event) {
     }
     
 }

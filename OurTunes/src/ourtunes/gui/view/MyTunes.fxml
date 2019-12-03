@@ -2,8 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,13 +14,13 @@
 
 <AnchorPane id="AnchorPane" prefHeight="743.0" prefWidth="917.0" style="-fx-background-color: azure;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ourtunes.gui.controllers.MyTunesController">
     <children>
-        <Button fx:id="newPlaylist" layoutX="40.0" layoutY="539.0" onAction="#createNewPlaylist" text="New..." />
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Text layoutX="114.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Playlists">
+      <Text layoutX="335.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Songs in playlist">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="335.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Songs on Playlist">
+        <Button fx:id="newPlaylist" layoutX="40.0" layoutY="539.0" onAction="#createNewPlaylist" text="New..." />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Text layoutX="114.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Playlists">
          <font>
             <Font size="18.0" />
          </font></Text>
@@ -40,16 +41,14 @@
       <Button fx:id="goUp" layoutX="302.0" layoutY="539.0" mnemonicParsing="false" text="UP" />
       <Button fx:id="goDown" layoutX="348.0" layoutY="539.0" mnemonicParsing="false" text="DOWN" />
       <TextField layoutX="789.0" layoutY="43.0" prefHeight="25.0" prefWidth="89.0" />
-      <Text layoutX="741.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter:">
+      <Text layoutX="735.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
          <font>
             <Font size="15.0" />
          </font></Text>
-      <Button fx:id="newSong" layoutX="542.0" layoutY="539.0" mnemonicParsing="false" text="New..." />
-      <Button layoutX="606.0" layoutY="540.0" mnemonicParsing="false" text="Edit..." />
-      <Button fx:id="deleteSong" layoutX="716.0" layoutY="540.0" mnemonicParsing="false" text="Delete" />
+      <Button fx:id="newSong" layoutX="590.0" layoutY="540.0" mnemonicParsing="false" onAction="#addNewSong" text="New..." />
+      <Button layoutX="653.0" layoutY="540.0" mnemonicParsing="false" text="Edit..." />
+      <Button fx:id="deleteSong" layoutX="817.0" layoutY="540.0" mnemonicParsing="false" text="Delete" />
       <ProgressBar layoutX="346.0" layoutY="88.0" prefWidth="200.0" progress="0.24" />
-      <Label layoutX="309.0" layoutY="79.0" text="00:00" />
-      <Label layoutX="552.0" layoutY="79.0" text="00:00" />
       <ImageView fx:id="rewindBack" fitHeight="25.0" fitWidth="25.0" layoutX="392.0" layoutY="98.0" nodeOrientation="RIGHT_TO_LEFT">
          <image>
             <Image url="@../../../../../../../Desktop/TunesMedia/rewind%20button.png" />
@@ -75,5 +74,26 @@
             <Image url="@../../../../../../../Desktop/TunesMedia/audio%20tunes.jpg" />
          </image>
       </ImageView>
+      <TableView layoutX="14.0" layoutY="159.0" prefHeight="374.0" prefWidth="256.0">
+        <columns>
+          <TableColumn prefWidth="87.0" text="Name" />
+          <TableColumn prefWidth="75.0" text="Total Songs" />
+            <TableColumn prefWidth="93.0" text="Total Time" />
+        </columns>
+      </TableView>
+      <TableView layoutX="292.0" layoutY="161.0" prefHeight="374.0" prefWidth="239.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="163.0" text="Song Name" />
+        </columns>
+      </TableView>
+      <TableView layoutX="566.0" layoutY="161.0" prefHeight="374.0" prefWidth="325.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Name" />
+          <TableColumn prefWidth="75.0" text="Artist" />
+            <TableColumn prefWidth="75.0" text="Category" />
+            <TableColumn prefWidth="99.0" text="Time" />
+        </columns>
+      </TableView>
     </children>
 </AnchorPane>

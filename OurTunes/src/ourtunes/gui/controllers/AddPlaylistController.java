@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -38,6 +39,9 @@ public class AddPlaylistController implements Initializable {
 
     @FXML
     private void cancelsSavingPlaylist(ActionEvent event) {
+        Stage stage = (Stage) cancelSavingPlaylist.getScene().getWindow();
+    
+    stage.close();
     }
     
 }
