@@ -23,6 +23,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import ourtunes.be.Song;
@@ -58,11 +61,14 @@ public class MyTunesController implements Initializable {
     @FXML
     private ImageView rewindForward;
 
-    private ListView lstSongs;
 
     private BllManager blMan;
     @FXML
-    private ListView<Song> displaySongs;
+    private TableView<Song> songTableView;
+    @FXML
+    private TableColumn<Song, String> songName;
+    @FXML
+    private TableColumn<Song,String > artistName;
 
     public MyTunesController() {
         blMan = new BllManager();
@@ -77,7 +83,16 @@ public class MyTunesController implements Initializable {
 
         ObservableList<Song> songlist = FXCollections.observableArrayList();
         songlist.addAll(listOfSongs);
-displaySongs.setItems(songlist);
+        
+                songName.setCellValueFactory(new PropertyValueFactory<>("name"));
+                
+artistName.setCellValueFactory(new PropertyValueFactory<>("artist"));
+                
+                
+                
+                
+                
+songTableView.setItems(songlist);
     }
 
     @FXML

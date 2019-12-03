@@ -35,10 +35,7 @@
       <Button fx:id="editPLaylist" layoutX="97.0" layoutY="539.0" mnemonicParsing="false" onAction="#onClickEditPlaylist" text="Edit..." />
       <Button fx:id="deletePLaylist" layoutX="189.0" layoutY="539.0" mnemonicParsing="false" onAction="#onClickDeletePlaylist" text="Delete" />
       <Button fx:id="deleteSongFromPlaylist" layoutX="456.0" layoutY="539.0" mnemonicParsing="false" text="Delete" />
-      <ListView fx:id="displayPlaylist" layoutX="45.0" layoutY="172.0" prefHeight="345.0" prefWidth="200.0" />
-      <ListView layoutX="302.0" layoutY="172.0" prefHeight="345.0" prefWidth="200.0" />
-      <ListView fx:id="displaySongs" layoutX="542.0" layoutY="172.0" prefHeight="345.0" prefWidth="342.0" />
-      <Button fx:id="goUp" layoutX="302.0" layoutY="539.0" mnemonicParsing="false" text="UP" />
+   <Button fx:id="goUp" layoutX="302.0" layoutY="539.0" mnemonicParsing="false" text="UP" />
       <Button fx:id="goDown" layoutX="348.0" layoutY="539.0" mnemonicParsing="false" text="DOWN" />
       <TextField layoutX="789.0" layoutY="43.0" prefHeight="25.0" prefWidth="89.0" />
       <Text layoutX="735.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
@@ -87,10 +84,10 @@
           <TableColumn prefWidth="163.0" text="Song Name" />
         </columns>
       </TableView>
-      <TableView layoutX="566.0" layoutY="161.0" prefHeight="374.0" prefWidth="325.0">
+      <TableView fx:id="songTableView" layoutX="559.0" layoutY="161.0" prefHeight="374.0" prefWidth="325.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Name" />
-          <TableColumn prefWidth="75.0" text="Artist" />
+          <TableColumn fx:id="songName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="artistName" prefWidth="75.0" text="Artist" />
             <TableColumn prefWidth="75.0" text="Category" />
             <TableColumn prefWidth="99.0" text="Time" />
         </columns>
