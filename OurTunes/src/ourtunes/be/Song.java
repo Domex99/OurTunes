@@ -65,5 +65,10 @@ public class Song {
     public int getTime() {
         return time;
     }
+    
+        @Override
+    public String toString() {
+        return songID + ") " + name + ", " + artist + ", " + time;
+    }
 
 }
