@@ -5,6 +5,7 @@
  */
 package ourtunes.gui.controllers;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -27,6 +28,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import ourtunes.be.Song;
 import ourtunes.bll.BllManager;
@@ -77,6 +80,14 @@ public class MyTunesController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
+        File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");   
+        Media m = new Media(songFile.toURI().toString());
+        MediaPlayer mp = new MediaPlayer(m);
+        mp.play();
+        
+        
         List<Song> listOfSongs = null;
 
         listOfSongs = blMan.getAllSongs();
