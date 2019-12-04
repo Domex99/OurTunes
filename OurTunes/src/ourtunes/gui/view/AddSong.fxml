@@ -11,11 +11,11 @@
       <Button fx:id="saveSong" layoutX="236.0" layoutY="337.0" mnemonicParsing="false" onAction="#savesTheSong" text="Save" />
       <TextField fx:id="inputSongName" layoutX="79.0" layoutY="92.0" promptText="Song Name..." />
       <Button fx:id="cancelSavingSong" layoutX="301.0" layoutY="337.0" mnemonicParsing="false" onAction="#cancelsSavingSong" text="Cancel" />
-      <TextField layoutX="79.0" layoutY="228.0" promptText="File Path..." />
+      <TextField fx:id="inputSongPath" layoutX="79.0" layoutY="228.0" promptText="File Path..." />
       <Button fx:id="chooseSongPath" layoutX="245.0" layoutY="228.0" mnemonicParsing="false" onAction="#choosesSongPath" text="Choose..." />
       <Text layoutX="175.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add a Song" />
-      <TextField layoutX="79.0" layoutY="126.0" promptText="Artist Name..." />
-      <TextField layoutX="79.0" layoutY="196.0" promptText="Song Length..." />
+      <TextField fx:id="inputSongArtist" layoutX="79.0" layoutY="126.0" promptText="Artist Name..." />
+      <TextField fx:id="inputSongLength" layoutX="79.0" layoutY="196.0" promptText="Song Length..." />
       <ChoiceBox fx:id="genreChoiceBox" layoutX="78.0" layoutY="159.0" prefWidth="150.0" />
       <Text layoutX="34.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Path:" />
       <Text layoutX="28.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Length:" />

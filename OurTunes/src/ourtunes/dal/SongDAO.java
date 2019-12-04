@@ -58,4 +58,25 @@ public class SongDAO {
         }
         return allSongs;
     }
+    public void createSong(Song song) throws SQLException
+    {
+     String sqlStatement = "INSERT INTO Song(songID, name, artist, genre, time, path) values(?,?,?,?,?,?)";
+     try(Connection con = connector.getConnection())
+     {
+         PreparedStatement ps = con.prepareStatement(sqlStatement);
+         ps.setInt(1, song.getSongID());
+         ps.setString(2, song.getName());
+         ps.setString(3, song.getArtist());
+         ps.setString(4, song.getGenre());
+         ps.setInt(5, song.getTime());
+         ps.setString(6, song.getPath());
+         ps.execute();
+         
+     } catch (SQLException ex)
+     {
+         throw new SQLException(ex);
+     }
+    }
+    
+   
 }

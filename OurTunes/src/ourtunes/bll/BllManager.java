@@ -29,4 +29,9 @@ public class BllManager {
         return songdao.getAllSongs();
     
     }
+    
+    public void addSong(Song song) throws SQLException
+    {
+        songdao.createSong(song);
+    }
 }
