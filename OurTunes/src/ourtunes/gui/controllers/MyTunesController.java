@@ -72,21 +72,26 @@ public class MyTunesController implements Initializable {
     private TableColumn<Song, String> songName;
     @FXML
     private TableColumn<Song,String > artistName;
+    @FXML
+    private Button playbtn;
+    @FXML
+    private Button pausebtn;
+    @FXML
+    private Button stopbtn;
 
     public MyTunesController() {
         blMan = new BllManager();
+                                 
+
+
        // lstSongs.getItems().add(this);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        
-        File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");   
-        Media m = new Media(songFile.toURI().toString());
-        MediaPlayer mp = new MediaPlayer(m);
-        mp.play();
-        
+
+
         
         List<Song> listOfSongs = null;
 
@@ -145,4 +150,29 @@ songTableView.setItems(songlist);
         stage.show();
     }
 
+    @FXML
+    private void playSelectedSong(ActionEvent event) {
+       File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
+                Media m = new Media(songFile.toURI().toString());
+                MediaPlayer mp = new MediaPlayer(m);
+        mp.play();
+    }
+
+    @FXML
+    private void pauseCurrentSong(ActionEvent event) {
+                File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
+                Media m = new Media(songFile.toURI().toString());
+                MediaPlayer mp = new MediaPlayer(m);
+        mp.pause();
+    }
+
+    @FXML
+    private void stopCurrentSong(ActionEvent event) {
+         File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
+                Media m = new Media(songFile.toURI().toString());
+                MediaPlayer mp = new MediaPlayer(m);
+                mp.stop();
+    }
+
+    
 }

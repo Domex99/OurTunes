@@ -92,5 +92,8 @@
             <TableColumn prefWidth="99.0" text="Time" />
         </columns>
       </TableView>
+      <Button fx:id="playbtn" layoutX="266.0" layoutY="85.0" mnemonicParsing="false" onAction="#playSelectedSong" text="Play" />
+      <Button fx:id="pausebtn" layoutX="206.0" layoutY="86.0" mnemonicParsing="false" onAction="#pauseCurrentSong" text="Pause" />
+      <Button fx:id="stopbtn" layoutX="145.0" layoutY="86.0" mnemonicParsing="false" onAction="#stopCurrentSong" text="Stop" />
     </children>
 </AnchorPane>
