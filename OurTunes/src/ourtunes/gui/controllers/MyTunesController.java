@@ -80,7 +80,7 @@ public class MyTunesController implements Initializable {
     @FXML
     private Button stopbtn;
     
-         File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
+         File songFile = new File("");
                 Media m = new Media(songFile.toURI().toString());
                 MediaPlayer mp = new MediaPlayer(m);
 
