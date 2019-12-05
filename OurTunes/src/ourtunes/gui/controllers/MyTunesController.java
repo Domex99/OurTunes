@@ -40,6 +40,7 @@ import ourtunes.dal.DalFacade;
  * @author hp
  */
 public class MyTunesController implements Initializable {
+    
 
     @FXML
     private Label label;
@@ -78,9 +79,14 @@ public class MyTunesController implements Initializable {
     private Button pausebtn;
     @FXML
     private Button stopbtn;
+    
+         File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
+                Media m = new Media(songFile.toURI().toString());
+                MediaPlayer mp = new MediaPlayer(m);
 
-    public MyTunesController() {
+    public MyTunesController()  {
         blMan = new BllManager();
+        
                                  
 
 
@@ -152,25 +158,19 @@ songTableView.setItems(songlist);
 
     @FXML
     private void playSelectedSong(ActionEvent event) {
-       File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
-                Media m = new Media(songFile.toURI().toString());
-                MediaPlayer mp = new MediaPlayer(m);
+
         mp.play();
     }
 
     @FXML
     private void pauseCurrentSong(ActionEvent event) {
-                File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
-                Media m = new Media(songFile.toURI().toString());
-                MediaPlayer mp = new MediaPlayer(m);
+
         mp.pause();
     }
 
     @FXML
     private void stopCurrentSong(ActionEvent event) {
-         File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
-                Media m = new Media(songFile.toURI().toString());
-                MediaPlayer mp = new MediaPlayer(m);
+
                 mp.stop();
     }
 
