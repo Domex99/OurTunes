@@ -56,5 +56,21 @@ connector = new DatabaseConnection();
         }
         return allPlaylists;
     }
+        public void createPlaylist (Playlist playlist) throws SQLException
+    {
+     String sqlStatement = "INSERT INTO Playlist(playlistID,playlistName) values(?,?)";
+     try(Connection con = connector.getConnection())
+     {
+         PreparedStatement ps = con.prepareStatement(sqlStatement);
+         ps.setInt(1, playlist.getplaylistID());
+         ps.setString(2, playlist.getplaylistName());
+         ps.execute();
+         
+     } catch (SQLException ex)
+     {
+         throw new SQLException(ex);
+     }
+    }
+    
     }
 
