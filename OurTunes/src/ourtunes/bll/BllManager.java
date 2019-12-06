@@ -7,7 +7,9 @@ package ourtunes.bll;
 
 import java.sql.SQLException;
 import java.util.List;
+import ourtunes.be.Playlist;
 import ourtunes.be.Song;
+import ourtunes.dal.PlaylistDAO;
 import ourtunes.dal.SongDAO;
 
 /**
@@ -17,6 +19,7 @@ import ourtunes.dal.SongDAO;
 public class BllManager {
     
     private SongDAO songdao;
+    private PlaylistDAO playlistdao;
     
     public BllManager(){
          songdao = new SongDAO();
@@ -33,5 +36,10 @@ public class BllManager {
     public void addSong(Song song) throws SQLException
     {
         songdao.createSong(song);
+    }
+    
+    public List<Playlist> getAllPlaylists() throws SQLException{
+        
+       return playlistdao.getAllPlaylist();
     }
 }

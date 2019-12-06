@@ -31,6 +31,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import ourtunes.be.Playlist;
 import ourtunes.be.Song;
 import ourtunes.bll.BllManager;
 import ourtunes.dal.DalFacade;
@@ -64,25 +65,18 @@ public class MyTunesController implements Initializable {
     private ImageView rewindBack;
     @FXML
     private ImageView rewindForward;
-
+    @FXML
+    private TableColumn<Playlist, String> playlistName;
 
     private BllManager blMan;
-    @FXML
     private TableView<Song> songTableView;
-    @FXML
     private TableColumn<Song, String> songName;
-    @FXML
     private TableColumn<Song,String > artistName;
-    @FXML
-    private Button playbtn;
-    @FXML
-    private Button pausebtn;
-    @FXML
-    private Button stopbtn;
     
-         File songFile = new File("");
+         File songFile = new File("C:\\Users\\XMdag\\Desktop\\test.mp3");
                 Media m = new Media(songFile.toURI().toString());
                 MediaPlayer mp = new MediaPlayer(m);
+
 
     public MyTunesController()  {
         blMan = new BllManager();
@@ -109,8 +103,20 @@ public class MyTunesController implements Initializable {
                 songName.setCellValueFactory(new PropertyValueFactory<>("name"));
                 
 artistName.setCellValueFactory(new PropertyValueFactory<>("artist"));
-                
-                
+
+        List<Playlist> listOfPlaylists = null;
+
+        try {
+            listOfPlaylists = blMan.getAllPlaylists();
+        } catch (SQLException ex) {
+            Logger.getLogger(MyTunesController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        ObservableList<Playlist> playlists = FXCollections.observableArrayList();
+        playlists.addAll(listOfPlaylists);
+        
+                playlistName.setCellValueFactory(new PropertyValueFactory<>("name"));
+                          
                 
                 
                 
@@ -156,19 +162,16 @@ songTableView.setItems(songlist);
         stage.show();
     }
 
-    @FXML
     private void playSelectedSong(ActionEvent event) {
 
         mp.play();
     }
 
-    @FXML
     private void pauseCurrentSong(ActionEvent event) {
 
         mp.pause();
     }
 
-    @FXML
     private void stopCurrentSong(ActionEvent event) {
 
                 mp.stop();

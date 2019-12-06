@@ -65,7 +65,7 @@ public int getplaylistID()
     }
 
 
-public int getplatlistLength() {
+public int getplaylistLength() {
         return playlistLength;
     }
 
