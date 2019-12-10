@@ -8,12 +8,13 @@ import java.sql.Connection;
 import java.util.Properties;
 
 /**
- * The {@code DbConnectionProvider} class is responsible for 
- * establishing connection with a database.
+
  * 
- * @author schemabuoi
- * @author kiddo
+ * @author Xmdag
+ *
  */
+
+//The DatabaseConnection class contains the code for connecting to the Database, being able to get values from it
 public class DatabaseConnection {
     
     private static final String PROP_FILE = "data/connectionInfo.properties";
@@ -36,17 +37,12 @@ public class DatabaseConnection {
         }
         catch(IOException e)
         {
-            //To DO
+            
         }
     }
     
-    /**
-     * Returns Connection object which is able to
-     * provide information about database.
-     * 
-     * @return The connection with database.
-     * @throws SQLServerException if connection with database cannot be established.
-     */
+    //Returns Connection object which is able to provide information about the Database.
+     
     public Connection getConnection() throws SQLServerException
     {
         return ds.getConnection();
