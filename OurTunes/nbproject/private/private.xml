@@ -3,19 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/be/Song.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/nbproject/jfx-impl.xml</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/be/Playlist.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/bll/BllManager.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/data/connectionInfo.properties</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/OurTunes.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/controllers/MyTunesController.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/controllers/AddPlaylistController.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/controllers/AddSongController.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/view/MyTunes.fxml</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/PlaylistDAO.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/SongDAO.java</file>
-            <file>file:/C:/Users/XMdag/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/DatabaseConnection.java</file>
+            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/dal/PlaylistDAO.java</file>
+            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/OurTunes.java</file>
+            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/controllers/AddPlaylistController.java</file>
+            <file>file:/C:/Users/hp/Documents/GitHub/OurTunes/OurTunes/src/ourtunes/gui/controllers/AddSongController.java</file>
         </group>
     </open-files>
 </project-private>

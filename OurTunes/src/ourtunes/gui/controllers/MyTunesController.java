@@ -80,7 +80,7 @@ public class MyTunesController implements Initializable {
     @FXML
     private Button stopbtn;
     
-         File songFile = new File("");
+         File songFile = new File("C:\\Users\\hp\\Desktop\\tunes_songs\\Carl Cox - Jaguar.mp3");
                 Media m = new Media(songFile.toURI().toString());
                 MediaPlayer mp = new MediaPlayer(m);
 
@@ -123,7 +123,7 @@ songTableView.setItems(songlist);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/AddPlaylist.fxml"));
         root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root1, 650, 650));
+        stage.setScene(new Scene(root1, 300, 300));
         stage.centerOnScreen();
         stage.show();
     }
@@ -134,14 +134,21 @@ songTableView.setItems(songlist);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/EditPlaylist.fxml"));
             root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root1, 650, 650));
+        stage.setScene(new Scene(root1, 300, 220));
         stage.centerOnScreen();
         stage.show();
         
     }
 
     @FXML
-    private void onClickDeletePlaylist(ActionEvent event) {
+    private void onClickDeletePlaylist(ActionEvent event) throws IOException {
+        Parent root1;
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/areYouSure.fxml"));
+            root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root1, 340, 260));
+        stage.centerOnScreen();
+        stage.show();
         
     }
 
@@ -151,7 +158,7 @@ songTableView.setItems(songlist);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/AddSong.fxml"));
             root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root1, 650, 650));
+        stage.setScene(new Scene(root1, 340, 280));
         stage.centerOnScreen();
         stage.show();
     }
