@@ -5,6 +5,7 @@
  */
 package ourtunes.gui.controllers;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -23,14 +24,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import ourtunes.be.Song;
 import ourtunes.bll.BllManager;
-import ourtunes.dal.DalFacade;
+import ourtunes.dal.DalController;
 
 /**
  *
@@ -60,18 +65,37 @@ public class MyTunesController implements Initializable {
     private ImageView rewindBack;
     @FXML
     private ImageView rewindForward;
-
-
-    private BllManager blMan;
     @FXML
     private TableView<Song> songTableView;
     @FXML
     private TableColumn<Song, String> songName;
     @FXML
     private TableColumn<Song,String > artistName;
+    @FXML
+    private TableColumn<Song,String > genreName;
+    @FXML
+    private Button stopSong;
+    @FXML
+    private Button playSong;
+    @FXML
+    private Slider volumeSlider;
+    @FXML
+    private TableColumn<?, ?> songTime;
+    @FXML
+    private TableColumn<?, ?> songTime1;
+    @FXML
+    private ImageView playingSong;
+    @FXML
+    private Label currentSong;
+    
+    private BllManager blMan;
+    
+    File songFile = new File("C:\\Users\\dpank\\Desktop\\IF\\mp3\\house.mp3");
+        Media m = new Media(songFile.toURI().toString());
+        MediaPlayer mp = new MediaPlayer(m);
 
-    public MyTunesController() {
-        blMan = new BllManager();
+    public MyTunesController() throws IOException {
+          blMan = new BllManager();
        // lstSongs.getItems().add(this);
     }
 
@@ -85,9 +109,9 @@ public class MyTunesController implements Initializable {
         songlist.addAll(listOfSongs);
         
                 songName.setCellValueFactory(new PropertyValueFactory<>("name"));
-                
-artistName.setCellValueFactory(new PropertyValueFactory<>("artist"));
-                
+                artistName.setCellValueFactory(new PropertyValueFactory<>("artist"));
+                genreName.setCellValueFactory(new PropertyValueFactory<>("genre"));
+                songTime.setCellValueFactory(new PropertyValueFactory<>("timeAsString"));
                 
                 
                 
@@ -134,4 +158,31 @@ songTableView.setItems(songlist);
         stage.show();
     }
 
+    @FXML
+    private void songStop(ActionEvent event) 
+    {
+        mp.stop();
+    }
+
+    private void songPause(ActionEvent event) 
+    {
+        mp.pause();
+    }
+
+    @FXML
+    private void songPlay(ActionEvent event) 
+    {
+        mp.play();
+    }
+
+    @FXML
+    private void setSound(MouseEvent event) {
+         if (mp != null) {
+            mp.setVolume(volumeSlider.getValue());
+        }
+}
+
+    @FXML
+    private void playSong(MouseEvent event) {
+    }
 }

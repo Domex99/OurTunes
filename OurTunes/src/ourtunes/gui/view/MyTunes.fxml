@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -28,7 +29,7 @@
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Text layoutX="385.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Now Playing:" textAlignment="CENTER" wrappingWidth="122.01171875">
+      <Text layoutX="165.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Now Playing:" textAlignment="CENTER" wrappingWidth="122.01171875">
          <font>
             <Font name="Times New Roman" size="15.0" />
          </font></Text>
@@ -45,13 +46,13 @@
       <Button fx:id="newSong" layoutX="590.0" layoutY="540.0" mnemonicParsing="false" onAction="#addNewSong" text="New..." />
       <Button layoutX="653.0" layoutY="540.0" mnemonicParsing="false" text="Edit..." />
       <Button fx:id="deleteSong" layoutX="817.0" layoutY="540.0" mnemonicParsing="false" text="Delete" />
-      <ProgressBar layoutX="346.0" layoutY="88.0" prefWidth="200.0" progress="0.24" />
+      <ProgressBar layoutX="287.0" layoutY="59.0" prefWidth="200.0" progress="0.24" />
       <ImageView fx:id="rewindBack" fitHeight="25.0" fitWidth="25.0" layoutX="392.0" layoutY="98.0" nodeOrientation="RIGHT_TO_LEFT">
          <image>
             <Image url="@../../../../../../../Desktop/TunesMedia/rewind%20button.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="115.0" fitWidth="122.0" layoutX="84.0" layoutY="12.0">
+      <ImageView fx:id="playingSong" fitHeight="115.0" fitWidth="122.0" layoutX="84.0" layoutY="12.0">
          <image>
             <Image url="@../../../../../../../Desktop/TunesMedia/com.audiomp3.music.mp3.musicplayer-logo.png" />
          </image>
@@ -64,11 +65,6 @@
       <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="434.0" layoutY="98.0">
          <image>
             <Image url="@../../../../../../../Desktop/pauza.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="95.0" layoutY="14.0">
-         <image>
-            <Image url="@../../../../../../../Desktop/TunesMedia/audio%20tunes.jpg" />
          </image>
       </ImageView>
       <TableView layoutX="14.0" layoutY="159.0" prefHeight="374.0" prefWidth="256.0">
@@ -88,9 +84,16 @@
         <columns>
           <TableColumn fx:id="songName" prefWidth="75.0" text="Name" />
           <TableColumn fx:id="artistName" prefWidth="75.0" text="Artist" />
-            <TableColumn prefWidth="75.0" text="Category" />
-            <TableColumn prefWidth="99.0" text="Time" />
+            <TableColumn fx:id="genreName" prefWidth="75.0" text="Genre" />
+            <TableColumn fx:id="songTime" prefWidth="99.0" text="Time" />
+            <TableColumn fx:id="songTime1" prefWidth="99.0" text="Time" />
         </columns>
       </TableView>
+      <Button fx:id="stopSong" layoutX="414.0" layoutY="94.0" mnemonicParsing="false" onAction="#songStop" text="Stop" />
+      <Button fx:id="playSong" layoutX="299.0" layoutY="94.0" mnemonicParsing="false" onAction="#songPlay" onMouseClicked="#playSong" text="Play" />
+      <Slider fx:id="volumeSlider" blockIncrement="1.0" layoutX="56.0" layoutY="100.0" majorTickUnit="0.25" max="1.0" onMouseReleased="#setSound" value="0.5" />
+      <Label layoutX="26.0" layoutY="98.0" prefHeight="17.0" prefWidth="25.0" text="Vol." />
+      <Label layoutX="288.0" layoutY="24.0" prefHeight="17.0" prefWidth="89.0" />
+      <Label fx:id="currentSong" layoutX="288.0" layoutY="24.0" prefHeight="17.0" prefWidth="79.0" text="Label" />
     </children>
 </AnchorPane>

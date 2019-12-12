@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ourtunes.dal;
+package ourtunes.dal.DAOs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,45 +16,38 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import ourtunes.be.Playlist;
+import ourtunes.dal.DatabaseConnection;
 import ourtunes.dal.DatabaseConnection;
 
 /**
  *
  * @author XMdag
  */
-public class PlaylistDAO {
+public class GenreDAO {
     
-
-    
-
 private DatabaseConnection connector;
 
 
-public PlaylistDAO()
+public GenreDAO()
 {
 connector = new DatabaseConnection();
-
 }
-//Gets All songs from the database
-    public List<Playlist> getAllPlaylist() throws SQLException
+
+//Gets a list with names of all genres from the database.
+
+public List<String> getAllGenres() throws SQLException
     {
-        String sqlStatement = "SELECT * FROM Playlists";
-        List<Playlist> allPlaylists = new ArrayList();
+        List<String> allGenres = new ArrayList();
+        String sqlStatement = "SELECT * FROM Genres";
         try(Connection con = connector.getConnection();
                 PreparedStatement statement = con.prepareStatement(sqlStatement))
         {
-
             ResultSet rs = statement.executeQuery();
             while(rs.next())
             {
-                int playlistID = rs.getInt("playlistID");
-                String playlistName = rs.getString("playlistName");
-                int playlistLength = rs.getInt("playlistLength");
-                allPlaylists.add(new Playlist(playlistID, playlistName));
+                allGenres.add(rs.getString("genreName"));
             }
+            return allGenres;
         }
-        return allPlaylists;
     }
-    }
-
+}
