@@ -24,23 +24,24 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import ourtunes.be.Song;
 import ourtunes.bll.BllManager;
-import ourtunes.dal.DalFacade;
+import ourtunes.dal.DalController;
 
 /**
  *
  * @author hp
  */
 public class MyTunesController implements Initializable {
-    
 
     @FXML
     private Label label;
@@ -64,9 +65,6 @@ public class MyTunesController implements Initializable {
     private ImageView rewindBack;
     @FXML
     private ImageView rewindForward;
-
-
-    private BllManager blMan;
     @FXML
     private TableView<Song> songTableView;
     @FXML
@@ -74,31 +72,35 @@ public class MyTunesController implements Initializable {
     @FXML
     private TableColumn<Song,String > artistName;
     @FXML
-    private Button playbtn;
+    private TableColumn<Song,String > genreName;
     @FXML
-    private Button pausebtn;
+    private Button stopSong;
     @FXML
-    private Button stopbtn;
+    private Button playSong;
+    @FXML
+    private Slider volumeSlider;
+    @FXML
+    private TableColumn<?, ?> songTime;
+    @FXML
+    private TableColumn<?, ?> songTime1;
+    @FXML
+    private ImageView playingSong;
+    @FXML
+    private Label currentSong;
     
-         File songFile = new File("C:\\Users\\hp\\Desktop\\tunes_songs\\Carl Cox - Jaguar.mp3");
-                Media m = new Media(songFile.toURI().toString());
-                MediaPlayer mp = new MediaPlayer(m);
+    private BllManager blMan;
+    
+    File songFile = new File("C:\\Users\\hp\\Desktop\\tunes_songs\\Jeff Mills - The Bells.mp3");
+        Media m = new Media(songFile.toURI().toString());
+        MediaPlayer mp = new MediaPlayer(m);
 
-    public MyTunesController()  {
-        blMan = new BllManager();
-        
-                                 
-
-
+    public MyTunesController() throws IOException {
+          blMan = new BllManager();
        // lstSongs.getItems().add(this);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-
-
-        
         List<Song> listOfSongs = null;
 
         listOfSongs = blMan.getAllSongs();
@@ -107,9 +109,9 @@ public class MyTunesController implements Initializable {
         songlist.addAll(listOfSongs);
         
                 songName.setCellValueFactory(new PropertyValueFactory<>("name"));
-                
-artistName.setCellValueFactory(new PropertyValueFactory<>("artist"));
-                
+                artistName.setCellValueFactory(new PropertyValueFactory<>("artist"));
+                genreName.setCellValueFactory(new PropertyValueFactory<>("genre"));
+                songTime.setCellValueFactory(new PropertyValueFactory<>("timeAsString"));
                 
                 
                 
@@ -123,7 +125,7 @@ songTableView.setItems(songlist);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/AddPlaylist.fxml"));
         root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root1, 300, 300));
+        stage.setScene(new Scene(root1, 650, 650));
         stage.centerOnScreen();
         stage.show();
     }
@@ -134,21 +136,14 @@ songTableView.setItems(songlist);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/EditPlaylist.fxml"));
             root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root1, 300, 220));
+        stage.setScene(new Scene(root1, 650, 650));
         stage.centerOnScreen();
         stage.show();
         
     }
 
     @FXML
-    private void onClickDeletePlaylist(ActionEvent event) throws IOException {
-        Parent root1;
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/areYouSure.fxml"));
-            root1 = (Parent) fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root1, 340, 260));
-        stage.centerOnScreen();
-        stage.show();
+    private void onClickDeletePlaylist(ActionEvent event) {
         
     }
 
@@ -158,28 +153,36 @@ songTableView.setItems(songlist);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ourtunes/gui/view/AddSong.fxml"));
             root1 = (Parent) fxmlLoader.load();
         Stage stage = new Stage();
-        stage.setScene(new Scene(root1, 340, 280));
+        stage.setScene(new Scene(root1, 650, 650));
         stage.centerOnScreen();
         stage.show();
     }
 
     @FXML
-    private void playSelectedSong(ActionEvent event) {
-
-        mp.play();
+    private void songStop(ActionEvent event) 
+    {
+        mp.stop();
     }
 
-    @FXML
-    private void pauseCurrentSong(ActionEvent event) {
-
+    private void songPause(ActionEvent event) 
+    {
         mp.pause();
     }
 
     @FXML
-    private void stopCurrentSong(ActionEvent event) {
-
-                mp.stop();
+    private void songPlay(ActionEvent event) 
+    {
+        mp.play();
     }
 
-    
+    @FXML
+    private void setSound(MouseEvent event) {
+         if (mp != null) {
+            mp.setVolume(volumeSlider.getValue());
+        }
+}
+
+    @FXML
+    private void playSong(MouseEvent event) {
+    }
 }

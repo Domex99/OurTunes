@@ -5,6 +5,8 @@
  */
 package ourtunes.be;
 
+import ourtunes.bll.util.TimeConvert;
+
 /**
  *
  * @author XMdag
@@ -20,7 +22,7 @@ public class Song {
     public boolean toString;
     
     
-    public Song(String name, String artist, String genre, int songID, int time, String path)
+    public Song(int songID, String name, String artist, String genre, int time, String path)
     {  
         this.name = name;
         this.songID = songID;
@@ -64,6 +66,10 @@ public class Song {
 
     public int getTime() {
         return time;
+    }
+    
+    public String getTimeAsString() {
+        return TimeConvert.convertToString(time);
     }
     
         @Override

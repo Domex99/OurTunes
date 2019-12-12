@@ -35,7 +35,6 @@ public class AddPlaylistController implements Initializable {
 
     @FXML
     private void savesPlaylist(ActionEvent event) {
-        
     }
 
     @FXML
